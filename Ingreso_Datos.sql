@@ -1,32 +1,48 @@
+
+insert into negocio.cliente (nombre,rut) values ('jaime alamos','16.317.462-k');
+insert into negocio.cliente (nombre,rut) values ('Pablito Pesadilla','17.193.417-5');
+insert into negocio.cliente (nombre,rut) values ('Loco Rene','10.416.628-2');
+
+
 insert into negocio.proveedor (nombre,rut) values ('Pedro Perez', '14.517.431-2');
 insert into negocio.proveedor (nombre,rut) values ('Juan Diaz', '17.497.491-7');
 insert into negocio.proveedor (nombre,rut) values ('Maria Mendez', '16.762.914-2');
 
-
-insert into negocio.producto (nombre,precio,tipoProducto,proveedor_id)values ('cryspo',2500,'snack',1);
-insert into negocio.producto (nombre,precio,tipoProducto,proveedor_id)values ('Kapo',450,'jugo',2);
-insert into negocio.producto (nombre,precio,tipoProducto,proveedor_id)values ('tomate',1600,'verdura',3);
-insert into negocio.producto (nombre,precio,tipoProducto,proveedor_id)values ('clorox',3000,'aseo',1);
-insert into negocio.producto (nombre,precio,tipoProducto,proveedor_id)values ('traga traga',1890,'snack',1);
-
-insert into negocio.factura (precioProveedor,fechaFactura,producto_id,proveedor_id) values (2200,'2022-03-26',5,1);
-insert into negocio.factura (precioProveedor,fechaFactura,producto_id,proveedor_id) values (1800,'2022-03-26',1,1);
-insert into negocio.factura (precioProveedor,fechaFactura,producto_id,proveedor_id) values (1700,'2022-08-12',4,2);
-insert into negocio.factura (precioProveedor,fechaFactura,producto_id,proveedor_id) values (1100,'2022-09-11',3,3);
+insert into negocio.categoria (nombreCategoria) values ('snack');
+insert into negocio.categoria (nombreCategoria) values ('articulo aseo');
+insert into negocio.categoria (nombreCategoria) values ('jugos y bebidas');
+insert into negocio.categoria (nombreCategoria) values ('frutas y verduras');
 
 
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('cryspo',1600,800,20,1,1);
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('esponja',800,200,15,2,2);
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('tomate',1700,1000,10,4,3);
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('bolsa basura',400,80,6,2,2);
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('ramitas',1700,900,8,1,1);
+insert into negocio.producto (nombre,precioVenta,precioCompra,stock,categoria_id,proveedor_id)values ('coca cola 2 lt',1400,800,12,3,1);
 
-insert into negocio.cliente (nombre,rut) values ('jaime alamos','16.317.462-k');
-
-insert into negocio.vendedor (nombre,rut) values ('cristian rojas','18.427.357-4');
-
-insert into negocio.compra (precioCompra,producto_id) values (1600,3);
-insert into negocio.compra (precioCompra,producto_id) values (1890,5);
-insert into negocio.compra (precioCompra,producto_id) values (450,2);
+insert into negocio.boleta (fecha,cliente_id) values ('2022-01-15',1);
+insert into negocio.boleta (fecha,cliente_id) values ('2022-12-29',2);
+insert into negocio.boleta (fecha,cliente_id) values ('2022-06-03',3);
 
 
-insert into negocio.boleta (fecha,precioTotal,compra_id,vendedor_id,cliente_id) values ('2021-12-06',1600,1,1,1);
-insert into negocio.boleta (fecha,precioTotal,compra_id,vendedor_id,cliente_id) values ('2021-12-06',1890,2,1,1);
+
+insert into negocio.detalleBoleta (cantidadProducto,precioBoleta,producto_id,boleta_id) values (2,3200,1,2);
+insert into negocio.detalleBoleta (cantidadProducto,precioBoleta,producto_id,boleta_id) values (1,1400,6,2);
+
+insert into negocio.detalleBoleta (cantidadProducto,precioBoleta,producto_id,boleta_id) values (1,800,2,1);
+insert into negocio.detalleBoleta (cantidadProducto,precioBoleta,producto_id,boleta_id) values (3,1200,4,1);
+
+insert into negocio.detalleBoleta (cantidadProducto,precioBoleta,producto_id,boleta_id) values (2,3400,5,3);
+
+
+
+
+
+
+
+
+
 
 
 

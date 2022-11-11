@@ -1,9 +1,8 @@
 
-
-SELECT boleta.precioTotal,boleta.vendedor_id,boleta.fecha,cliente.nombre
+use negocio;
+SELECT boleta.boleta_id,boleta.fecha,cliente.nombre,producto.nombre,detalleBoleta.cantidadProducto,detalleBoleta.precioBoleta
 FROM negocio.cliente
-left JOIN negocio.boleta on negocio.cliente.cliente_id = negocio.boleta.cliente_id;
+inner JOIN negocio.boleta on boleta.cliente_id = cliente.cliente_id
+inner join detalleBoleta on detalleBoleta.boleta_id = boleta.boleta_id
+inner join producto on producto.producto_id = detalleBoleta.producto_id;
 
-SELECT factura.factura_id,factura.precioProveedor,proveedor.nombre
-FROM negocio.factura
-left JOIN negocio.proveedor on negocio.proveedor.proveedor_id = negocio.factura.proveedor_id;
