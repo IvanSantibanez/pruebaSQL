@@ -1,4 +1,4 @@
-
+# Comandos para limpiar schema
 ALTER TABLE negocio.producto DROP foreign key productoCategoria;
 ALTER TABLE negocio.producto DROP foreign key productoProveedor;
 ALTER TABLE negocio.detalleBoleta DROP foreign key detalleBoletaProducto;
@@ -14,7 +14,7 @@ DROP TABLE negocio.cliente;
 
 DROP SCHEMA negocio;
 
-
+# Inicio de la creación de schema
 create schema if not exists negocio;
 
 create table `negocio`.`producto`(
